@@ -84,9 +84,9 @@ module.exports = {
     authToken: process.env.PLIVO_AUTH_TOKEN
   },
   redis: {
-    host: process.env.REDIS_HOST,
-    port: parseInt(process.env.REDIS_PORT),
-    password: process.env.REDIS_PASSWORD
+    // host: process.env.REDIS_HOST,
+    // port: parseInt(process.env.REDIS_PORT),
+    // password: process.env.REDIS_PASSWORD
   },
   coap: {
     port: parseInt(process.env.COAP_PORT),
@@ -101,8 +101,8 @@ module.exports = {
     token: process.env.YO_TOKEN
   },
   skynet_override_token: process.env.OVERRIDE_TOKEN,
-  useProxyProtocol: (process.env.USE_PROXY_PROTOCOL || "false").toLowerCase() == "true"
-   ,
+  useProxyProtocol: (process.env.USE_PROXY_PROTOCOL || "false").toLowerCase() == "true",
+  useMongoIOStore: true,
  parentConnection: {
    uuid: process.env.PARENT_CONNECTION_UUID,
    token: process.env.PARENT_CONNECTION_TOKEN,

@@ -20,6 +20,12 @@ var program = require('commander');
 var pjson = require('./package.json');
 var config = require('./config');
 
+console.error = function(error) {
+  console.log(error.stack);
+  throw error;
+  process.exit(1);
+}
+
 var parentConnection;
 
 program
